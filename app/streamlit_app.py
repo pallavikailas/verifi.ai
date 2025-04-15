@@ -1,14 +1,14 @@
 import streamlit as st
 from app.utils import run_inference_pipeline
 
-st.set_page_config(page_title="verifi.ai Pro", layout="centered")
-st.title("🧠 verifi.ai Pro – Fake News Classifier")
-st.markdown("Enter a news headline or story below:")
+st.set_page_config(page_title="verifi.ai Pro")
+st.title("💡 verifi.ai Pro")
+st.write("Enter a news headline or article:")
 
-text_input = st.text_area("Text", height=150)
-if st.button("Classify"):
-    if text_input.strip():
-        prediction = run_inference_pipeline(text_input)
-        st.success(f"Prediction: {prediction}")
+text_input = st.text_area("Text", height=200)
+if st.button("Predict"):
+    if text_input:
+        label = run_inference_pipeline(text_input)
+        st.success(f"Prediction: {label}")
     else:
-        st.warning("Please enter some text.")
+        st.warning("Please enter text before predicting.")
