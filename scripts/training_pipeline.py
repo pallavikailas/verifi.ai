@@ -26,7 +26,7 @@ EPOCHS = 3
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load data
-X_train, X_test, y_train, y_test = load_dataset(FAKE_PATH, TRUE_PATH)
+X_train, X_test, y_train, y_test = load_data(FAKE_PATH, TRUE_PATH)
 
 # Tokenizer map for each model
 tokenizer_map = {
@@ -38,8 +38,8 @@ tokenizer_map = {
 def train_and_save(model_name, ModelClass, model_path):
     print(f"\n🔧 Training {model_name.upper()}...")
     tokenizer_name = tokenizer_map[model_name]
-    train_dataset = FakeNewsDataset(X_train, y_train, tokenizer_name)
-    test_dataset = FakeNewsDataset(X_test, y_test, tokenizer_name)
+    train_dataset = NewsDataset(X_train, y_train, tokenizer_name)
+    test_dataset = NewsDataset(X_test, y_test, tokenizer_name)
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE)
 
