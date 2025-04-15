@@ -1,6 +1,8 @@
-transformers==4.39.3
-torch>=1.13
-streamlit>=1.18
+matplotlib
+torch
+transformers
+streamlit
 scikit-learn
 pandas
-matplotlib
+shap
+tqdm
