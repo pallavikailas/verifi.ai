@@ -1,7 +1,8 @@
 import os
 import torch
 from torch.utils.data import DataLoader
-from transformers import AutoTokenizer, AdamW
+from transformers import AutoTokenizer
+from torch.optim import AdamW
 from sklearn.metrics import accuracy_score
 from tqdm import tqdm
 
