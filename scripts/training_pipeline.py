@@ -1,10 +1,15 @@
 import os
+import sys
+
 import torch
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 from torch.optim import AdamW
 from sklearn.metrics import accuracy_score
 from tqdm import tqdm
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from models.bert.model import BERTClassifier
 from models.gpt2.model import GPT2Classifier
