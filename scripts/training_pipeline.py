@@ -14,7 +14,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models.bert.model import BERTClassifier
 from models.gpt2.model import GPT2Classifier
 from models.roberta.model import RoBERTaClassifier
-from dataloader.news_loader import NewsDataset, load_dataset
+from dataloader.news_loader import NewsDataset, load_data
 
 # Paths
 FAKE_PATH = "data/raw/fake.csv"
