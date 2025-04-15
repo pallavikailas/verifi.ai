@@ -24,8 +24,15 @@ Each CSV must contain:
 - Zipped CSV handling
 - Configurable model paths and parameters
 
+## Clone the Repository
+```bash
+git clone https://github.com/pallavikailas/verifi.ai.git
+cd verifi.ai
+```
+
 ## Setup
 ```bash
+chmod +x setup.sh
 bash setup.sh
 ```
 
