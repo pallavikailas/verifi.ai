@@ -12,8 +12,8 @@ import os
 
 def train_roberta_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    X_train, _, y_train, _ = load_dataset("data/raw/fake.zip", "data/raw/true.zip")
-    train_dataset = FakeNewsDataset(X_train, y_train, "roberta-base")
+    X_train, _, y_train, _ = load_data("data/raw/Fake.csv", "data/raw/True.csv")
+    train_dataset = NewsDataset(X_train, y_train, "roberta-base")
     train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 
     model = RoBERTaClassifier().to(device)
