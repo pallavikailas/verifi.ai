@@ -33,11 +33,3 @@ bash setup.sh
 ```bash
 streamlit run app/streamlit_app.py
 ```
-
-# setup.sh
-#!/bin/bash
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py
