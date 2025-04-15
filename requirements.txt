@@ -1,7 +1,6 @@
-streamlit
-transformers
-torch
+transformers==4.39.3
+torch>=1.13
+streamlit>=1.18
 scikit-learn
 pandas
-numpy
-datasets
+matplotlib
