@@ -1,0 +1,7 @@
+bert_model: "bert-base-uncased"
+gpt2_model: "gpt2"
+roberta_model: "roberta-base"
+max_seq_length: 256
+batch_size: 16
+epochs: 3
+learning_rate: 2e-5
