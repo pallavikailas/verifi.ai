@@ -24,7 +24,7 @@ def train_roberta_model():
     loss_fn = torch.nn.CrossEntropyLoss()
 
     model.train()
-    for epoch in range(3):
+    for epoch in range(1):
         total_loss = 0
         for batch in tqdm(train_loader, desc=f"Epoch {epoch+1}"):
             input_ids = batch['input_ids'].to(device)
