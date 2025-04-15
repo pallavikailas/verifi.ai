@@ -12,8 +12,6 @@ from tqdm import tqdm
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from models.bert.model import BERTClassifier
-from models.gpt2.model import GPT2Classifier
-from models.roberta.model import RoBERTaClassifier
 from dataloader.news_loader import NewsDataset, load_data
 
 # Paths
@@ -31,8 +29,6 @@ X_train, X_test, y_train, y_test = load_data(FAKE_PATH, TRUE_PATH)
 # Tokenizer map for each model
 tokenizer_map = {
     "bert": "bert-base-uncased",
-    "gpt2": "gpt2",
-    "roberta": "roberta-base"
 }
 
 def train_and_save(model_name, ModelClass, model_path):
@@ -86,5 +82,3 @@ def train_and_save(model_name, ModelClass, model_path):
 
 # Train all models
 train_and_save("bert", BERTClassifier, "models/bert/bert_model.pt")
-train_and_save("gpt2", GPT2Classifier, "models/gpt2/gpt2_model.pt")
-train_and_save("roberta", RoBERTaClassifier, "models/roberta/roberta_model.pt")
