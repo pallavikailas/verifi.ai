@@ -1,8 +1,8 @@
 import streamlit as st
 from app.utils import run_inference_pipeline
 
-st.set_page_config(page_title="verifi.ai Pro")
-st.title("💡 verifi.ai Pro")
+st.set_page_config(page_title="verifi.ai")
+st.title("💡 verifi.ai")
 st.write("Enter a news headline or article:")
 
 text_input = st.text_area("Text", height=200)
