@@ -1,5 +1,5 @@
 import streamlit as st
-from app.utils import run_inference_pipeline
+from utils import run_inference_pipeline
 
 st.set_page_config(page_title="verifi.ai")
 st.title("💡 verifi.ai")
