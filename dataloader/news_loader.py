@@ -30,5 +30,12 @@ def load_data(fake_path, true_path, test_size=0.2):
     fake['label'] = 0
     true['label'] = 1
     df = pd.concat([fake, true]).sample(frac=1).reset_index(drop=True)
+    
     X_train, X_test, y_train, y_test = train_test_split(df['text'], df['label'], test_size=test_size, random_state=42)
+    
+    X_train = X_train.reset_index(drop=True)
+    y_train = y_train.reset_index(drop=True)
+    X_test = X_test.reset_index(drop=True)
+    y_test = y_test.reset_index(drop=True)
+    
     return X_train, X_test, y_train, y_test
