@@ -12,11 +12,15 @@ import os
 
 def train_bert_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Training on {device}.")
+
     X_train, _, y_train, _ = load_data("data/raw/Fake.csv", "data/raw/True.csv")
+    
     train_dataset = NewsDataset(X_train, y_train, "bert-base-uncased")
     train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 
     model = BERTClassifier().to(device)
+    
     optimizer = AdamW(model.parameters(), lr=2e-5)
     loss_fn = torch.nn.CrossEntropyLoss()
 
@@ -33,8 +37,12 @@ def train_bert_model():
             loss = loss_fn(outputs, labels)
             loss.backward()
             optimizer.step()
+            
             total_loss += loss.item()
+
         print(f"Epoch {epoch+1} loss: {total_loss:.4f}")
 
+    # Save the trained model to disk
     os.makedirs("models/bert", exist_ok=True)
     torch.save(model.state_dict(), "models/bert/bert_model.pt")
+    print("Model saved to models/bert/bert_model.pt")
