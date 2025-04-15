@@ -1,9 +1,13 @@
-import torch
-from transformers import AdamW
-from tqdm import tqdm
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 from models.bert.model import BERTClassifier
-from scripts.data_loader import load_dataset, FakeNewsDataset
+from dataloader.news_loader import load_data, NewsDataset
 from torch.utils.data import DataLoader
+import torch
+from torch.optim import AdamW
+from tqdm import tqdm
 import os
 
 def train_bert_model():
@@ -34,4 +38,3 @@ def train_bert_model():
 
     os.makedirs("models/bert", exist_ok=True)
     torch.save(model.state_dict(), "models/bert/bert_model.pt")
-

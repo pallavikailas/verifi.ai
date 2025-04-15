@@ -1,3 +1,7 @@
+import torch
+import torch.nn as nn  # Import nn from torch
+from transformers import BertModel
+
 class BERTClassifier(nn.Module):
     def __init__(self):
         super().__init__()
