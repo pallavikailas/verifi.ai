@@ -17,8 +17,8 @@ from models.roberta.model import RoBERTaClassifier
 from dataloader.news_loader import NewsDataset, load_data
 
 # Paths
-FAKE_PATH = "data/raw/fake.csv"
-TRUE_PATH = "data/raw/true.csv"
+FAKE_PATH = "data/raw/Fake.csv"
+TRUE_PATH = "data/raw/True.csv"
 
 # Common
 BATCH_SIZE = 8
