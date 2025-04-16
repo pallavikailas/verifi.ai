@@ -1,6 +1,6 @@
 # 📰 verifi.ai
 
-Fake news detection using an ensemble of BERT, GPT-2, and RoBERTa models. Built using HuggingFace Transformers and Streamlit for deployment.
+Fake news detection using BERT. Built using HuggingFace Transformers and Streamlit for deployment.
 
 ## Features
 - BERT-based binary classification
@@ -9,8 +9,8 @@ Fake news detection using an ensemble of BERT, GPT-2, and RoBERTa models. Built 
 
 ## Dataset
 The model is trained on true.csv and fake.csv, zipped and placed in:
-- data/raw/true.zip
-- data/raw/fake.zip
+- data/raw/True.csv.zip
+- data/raw/Fake.csv.zip
 
 Each CSV must contain:
 - title
