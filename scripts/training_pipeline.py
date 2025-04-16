@@ -22,7 +22,7 @@ TRUE_PATH = "data/raw/True.csv"
 
 # Common
 BATCH_SIZE = 8
-EPOCHS = 3
+EPOCHS = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load data
