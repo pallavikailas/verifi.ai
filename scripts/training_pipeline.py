@@ -15,12 +15,12 @@ from models.bert.model import BERTClassifier
 from dataloader.news_loader import NewsDataset, load_data
 
 # Paths
-FAKE_PATH = "data/raw/fake.csv"
-TRUE_PATH = "data/raw/true.csv"
+FAKE_PATH = "data/raw/Fake.csv"
+TRUE_PATH = "data/raw/True.csv"
 
 # Common
-BATCH_SIZE = 8
-EPOCHS = 3
+BATCH_SIZE = 16
+EPOCHS = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load data
