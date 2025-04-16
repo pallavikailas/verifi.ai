@@ -21,7 +21,7 @@ FAKE_PATH = "data/raw/Fake.csv"
 TRUE_PATH = "data/raw/True.csv"
 
 # Common
-BATCH_SIZE = 8
+BATCH_SIZE = 16
 EPOCHS = 1
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
